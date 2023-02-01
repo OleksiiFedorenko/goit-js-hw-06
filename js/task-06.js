@@ -3,16 +3,17 @@ const inputRef = document.querySelector('#validation-input');
 inputRef.addEventListener('blur', onInputCheck);
 
 function onInputCheck(event) {
-  if (!event.currentTarget.value) {
-    event.currentTarget.classList.remove('valid', 'invalid');
-  } else if (
-    event.currentTarget.value.length ===
-    Number(event.currentTarget.dataset.length)
-  ) {
-    event.currentTarget.classList.remove('invalid');
-    event.currentTarget.classList.add('valid');
+  const valueRef = event.currentTarget.value;
+  const checkLength = Number(event.currentTarget.dataset.length);
+  const classRef = event.currentTarget.classList;
+
+  if (!valueRef) {
+    classRef.remove('valid', 'invalid');
+  } else if (valueRef.length === checkLength) {
+    classRef.add('valid');
+    classRef.remove('invalid');
   } else {
-    event.currentTarget.classList.remove('valid');
-    event.currentTarget.classList.add('invalid');
+    classRef.remove('valid');
+    classRef.add('invalid');
   }
 }

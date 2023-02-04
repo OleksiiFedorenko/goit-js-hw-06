@@ -1,9 +1,10 @@
 const inputRef = document.querySelector('input');
 const createBtnRef = document.querySelector('button[data-create]');
-createBtnRef.addEventListener('click', onCreate);
 const destroyBtnRef = document.querySelector('button[data-destroy]');
-destroyBtnRef.addEventListener('click', onClean);
 const boxesRef = document.querySelector('#boxes');
+
+createBtnRef.addEventListener('click', onCreate);
+destroyBtnRef.addEventListener('click', onClean);
 
 function onCreate() {
   const boxesArr = Array(Number(inputRef.value))

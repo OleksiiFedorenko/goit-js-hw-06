@@ -1,4 +1,5 @@
 const categoriesRef = document.querySelectorAll('.item');
+
 console.log('Number of categories: ', categoriesRef.length);
 
 categoriesRef.forEach(cat => {

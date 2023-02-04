@@ -7,11 +7,11 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingMarkupArray = ingredients.map(ing => {
+const ingElements = ingredients.map(ing => {
   const newListItem = document.createElement('li');
   newListItem.textContent = ing;
   newListItem.classList.add('item');
   return newListItem;
 });
 
-document.querySelector('#ingredients').append(...ingMarkupArray);
+document.querySelector('#ingredients').append(...ingElements);

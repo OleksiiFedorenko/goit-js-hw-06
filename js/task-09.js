@@ -1,7 +1,7 @@
 const colorBtnRef = document.querySelector('.change-color');
-colorBtnRef.addEventListener('click', onChangeColor);
-
 const colorTextRef = document.querySelector('.color');
+
+colorBtnRef.addEventListener('click', onChangeColor);
 
 function onChangeColor() {
   const currentColor = getRandomHexColor();

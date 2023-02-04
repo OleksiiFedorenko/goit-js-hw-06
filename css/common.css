@@ -29,11 +29,11 @@ img {
 
 .gallery {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   list-style: none;
 }
 
 .task03-list-item:not(:last-child) {
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
